@@ -318,14 +318,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="C:\Users\Matth\source\repos\AntOnACube\AntOnACube\Simulation.h" />
     <ClCompile Include="C:\Users\Matth\source\repos\AntOnACube\AntOnACube\Simulation.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="C:\Users\Matth\source\repos\AntOnACube\ZERO_CHECK.vcxproj">
-      <Project>{83393238-352B-3998-98E6-57189888D914}</Project>
-      <Name>ZERO_CHECK</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
