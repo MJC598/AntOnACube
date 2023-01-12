@@ -1,5 +1,6 @@
 #pragma once
 #include "Graph.h"
+#include "RandomNumberGenerator.h"
 
 class Ant {
 public:
@@ -9,11 +10,6 @@ public:
 	Vertex* location;
 	Vertex* goal;
 
-	Ant(Vertex* start, Vertex* goal, Graph* graph) : location(start), goal(goal), graph(graph) {
-		totalTimeTraveled = 1; 
-		path.push_back(start);
-	}
-
-	void move();
-
+	Ant(Vertex* start, Vertex* goal, Graph* graph);
+	void move(RandomNumberGenerator* rng);
 };

@@ -1,3 +1,0 @@
-C:/Users/Matth/source/repos/AntOnACube/CMakeFiles/AntOnACube.dir
-C:/Users/Matth/source/repos/AntOnACube/CMakeFiles/ALL_BUILD.dir
-C:/Users/Matth/source/repos/AntOnACube/CMakeFiles/ZERO_CHECK.dir
