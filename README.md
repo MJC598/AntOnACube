@@ -38,24 +38,24 @@ In order to verify our average we can simply use mathematics of random walks on 
 
 A few important observations:
 1. At the initial position, we know that $v_s$ will always have a 100% probability of being 3 units away from $v_e$ and any step the ant takes will move it to a $v_2$. 
-2. If the ant is at a $v_2$ vertex /frac{2}{3} of the possible paths leads to a $v_1$ and /frac{1}{3} chance of going back to $v_s$.
-3. If the ant is at a $v_1$ vertex /frac{1}{3} of the paths lead to $v_e$ and /frac{2}{3} of the paths lead to $v_2$.
+2. If the ant is at a $v_2$ vertex \frac{2}{3} of the possible paths leads to a $v_1$ and \frac{1}{3} chance of going back to $v_s$.
+3. If the ant is at a $v_1$ vertex \frac{1}{3} of the paths lead to $v_e$ and \frac{2}{3} of the paths lead to $v_2$.
 4. $v_e$ always has a distance of 0 from $v_e$.
 
-These 4 observations can be transformed into a system of linear equations to be solved. Given observation one, we can say that $v_s = v_2 + 1$. Given observation two, we can say $v_2 = /frac{2}{3}v_1 + /frac{1}{3}v_s + 1$. Finally, given observation three, we can say $v_1 = /frac{1}{3}v_e + /frac{2}{3}v_2 + 1$. After seeing these equations we simply use substitution to solve for $v_s$.
+These 4 observations can be transformed into a system of linear equations to be solved. Given observation one, we can say that $v_s = v_2 + 1$. Given observation two, we can say $v_2 = \frac{2}{3}v_1 + \frac{1}{3}v_s + 1$. Finally, given observation three, we can say $v_1 = \frac{1}{3}v_e + \frac{2}{3}v_2 + 1$. After seeing these equations we simply use substitution to solve for $v_s$.
 
 ```math
-v_s = (frac{2}{3}v_1 + /frac{1}{3}v_s + 1) + 1 
+v_s = (\frac{2}{3}v_1 + \frac{1}{3}v_s + 1) + 1 \\
 
-= v_1 + 3
+= v_1 + 3 \\
 
-v_1 = 0 + /frac{2}{3}(frac{2}{3}v_1 + /frac{1}{3}v_s + 1) + 1
+v_1 = 0 + \frac{2}{3}(\frac{2}{3}v_1 + \frac{1}{3}v_s + 1) + 1 \\
 
-= \frac{18}{45}v_s + 3
+= \frac{18}{45}v_s + 3 \\
 
-v_s = ()\frac{18}{45}v_s + 3) + 3
+v_s = ()\frac{18}{45}v_s + 3) + 3 \\
 
-v_s = 10
+v_s = 10 \\
 ```
 
 Therefore we would expect an average of around 10 steps.
