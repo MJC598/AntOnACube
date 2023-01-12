@@ -26,6 +26,13 @@ Once here you can run the project now located in the build directory via:
 ./AntOnACube
 ```
 
+#### Design Choices
+A number of design choices were made in this project, the big ones are outlined below.
+* C++ - This project was done in C++ primarily because in simulation models speed and space is important. Because of this choice I decided to stay away from any GUI design, whereas with Java it would've been considered. The cross compatibility of the code was very important as I was developing on a Windows machine and testing on an Ubuntu machine. However, if I had wanted to focus instead on prototyping or quick modifications I would've chosen Python because of it's compilation down to C and its syntax that can be very easily converted to mathematical symbols.
+* Docker - I considered Dockerizing this project to ensure the build can be run in isolation, but given the small size of the project and the specific mention of a makefile (or build instructions) I decided it was not worth the time.
+* Thread Pool - Originally I designed the project to create a bunch of threads based on the number of ants walking. However, I began testing with large numbers of simulations and it quickly became a memory problem. To combat this I introduced a thread pool to pull from to combat memory issues and still maintain as many threads as possible.
+* Graph Structure - This problem is easily adapted to an octagonal prism, pyramids, etc. as well as other pathways (Bridges of Koenigsberg problem). Because of this, I didn't want the cube to be a big challenge to overcome in the entire design so instead I made it a flexible graph. It also stuck out because it was similar to a problem I dealt with a little over a year ago during a combinatorics class.
+
 #### Math Verification of Results
 In order to verify our average we can simply use mathematics of random walks on a graph. The cube outlined above is just an undirected, unweighted graph with each vertex having 3 edges. Because all rules still hold regardless of where the ant is initially dropped (it is still trying to get to the opposite vertex) we can name the starting vertex $v_s$ and the end vertex $v_e$. Subsequently, each other vertex in the cube is at least 1 step away but no more than 2 steps away from $v_e$. They will be denoted $v_1$ and $v_2$ respectively. We can use this with the probability of repeating steps to determine an expected result.
 
