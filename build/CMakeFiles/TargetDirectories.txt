@@ -1,3 +1,0 @@
-/mnt/c/Users/Matth/source/repos/AntOnACube/build/CMakeFiles/AntOnACube.dir
-/mnt/c/Users/Matth/source/repos/AntOnACube/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/Matth/source/repos/AntOnACube/build/CMakeFiles/rebuild_cache.dir

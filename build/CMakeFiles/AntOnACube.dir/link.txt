@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/AntOnACube.dir/AntOnACube.cpp.o CMakeFiles/AntOnACube.dir/Graph.cpp.o CMakeFiles/AntOnACube.dir/Ant.cpp.o CMakeFiles/AntOnACube.dir/Simulation.cpp.o CMakeFiles/AntOnACube.dir/RandomNumberGenerator.cpp.o CMakeFiles/AntOnACube.dir/ThreadPool.cpp.o -o AntOnACube 
