@@ -26,7 +26,7 @@ Once here you can run the project now located in the build directory via:
 ./AntOnACube
 ```
 
-#### Math Verification
+#### Math Verification of Results
 In order to verify our average we can simply use mathematics of random walks on a graph. The cube outlined above is just an undirected, unweighted graph with each vertex having 3 edges. Because all rules still hold regardless of where the ant is initially dropped (it is still trying to get to the opposite vertex) we can name the starting vertex $v_s$ and the end vertex $v_e$. Subsequently, each other vertex in the cube is at least 1 step away but no more than 2 steps away from $v_e$. They will be denoted $v_1$ and $v_2$ respectively. We can use this with the probability of repeating steps to determine an expected result.
 
 A few important observations:

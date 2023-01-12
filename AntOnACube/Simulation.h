@@ -14,8 +14,8 @@ private:
 	RandomNumberGenerator* rng;
 	Graph* graph;
 	std::vector<std::thread> threadVector;
-	std::vector<Ant*> ants;
 public:
+	std::vector<Ant*> ants;
 	unsigned long numSims;
 	unsigned long long totalSum;
 	Simulation(unsigned long numSims, Graph* graph, unsigned int seed);

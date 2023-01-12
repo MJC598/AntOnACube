@@ -4,13 +4,13 @@
 
 class ThreadPool {
 public:
-	void Start();
-	void QueueJob(const std::function<void()>& job);
-	void Stop();
-	bool Busy();
+	void start();
+	void queueJob(const std::function<void()>& job);
+	void stop();
+	bool busy();
 
 private:
-	void ThreadLoop();
+	void threadLoop();
 	bool should_terminate = false;
 	std::mutex queue_mutex;
 	std::condition_variable mutex_condition;

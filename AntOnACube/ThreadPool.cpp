@@ -1,14 +1,20 @@
 #include "ThreadPool.h"
 
-void ThreadPool::Start() {
+/// <summary>
+/// Function to start Thread Pool
+/// </summary>
+void ThreadPool::start() {
 	const uint32_t numThreads = std::thread::hardware_concurrency();
 	threads.resize(numThreads);
 	for (uint32_t i = 0; i < numThreads; i++) {
-		threads.at(i) = std::thread(&ThreadPool::ThreadLoop, this);
+		threads.at(i) = std::thread(&ThreadPool::threadLoop, this);
 	}
 }
 
-void ThreadPool::ThreadLoop() {
+/// <summary>
+/// Function to continuously loop looking for jobs to assign to a thread
+/// </summary>
+void ThreadPool::threadLoop() {
 	while (true) {
 		std::function<void()>job;
 		{
@@ -26,7 +32,11 @@ void ThreadPool::ThreadLoop() {
 	}
 }
 
-void ThreadPool::QueueJob(const std::function<void()>& job) {
+/// <summary>
+/// Entry point for a job to be queued to a thread in the pool
+/// </summary>
+/// <param name="job"></param>
+void ThreadPool::queueJob(const std::function<void()>& job) {
 	{
 		std::unique_lock<std::mutex> lock(queue_mutex);
 		jobs.push(job);
@@ -34,7 +44,11 @@ void ThreadPool::QueueJob(const std::function<void()>& job) {
 	mutex_condition.notify_one();
 }
 
-bool ThreadPool::Busy() {
+/// <summary>
+/// Helper function to determine if the pool is busy
+/// </summary>
+/// <returns></returns>
+bool ThreadPool::busy() {
 	bool poolBusy;
 	{
 		std::unique_lock<std::mutex> lock(queue_mutex);
@@ -43,7 +57,10 @@ bool ThreadPool::Busy() {
 	return poolBusy;
 }
 
-void ThreadPool::Stop() {
+/// <summary>
+/// Helper Function to join all threads and end all tasks
+/// </summary>
+void ThreadPool::stop() {
 	{
 		std::unique_lock<std::mutex> lock(queue_mutex);
 		should_terminate = true;

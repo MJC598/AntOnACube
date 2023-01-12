@@ -8,6 +8,8 @@
 #include <vector>
 #include <map>
 #include <thread>
+#include <fstream>
+#include <string>
 
 #include "Graph.h"
 #include "Simulation.h"
