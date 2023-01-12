@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AntOnACube.dir/RandomNumberGenerator.cpp.o.d"
   "CMakeFiles/AntOnACube.dir/Simulation.cpp.o"
   "CMakeFiles/AntOnACube.dir/Simulation.cpp.o.d"
+  "CMakeFiles/AntOnACube.dir/ThreadPool.cpp.o"
+  "CMakeFiles/AntOnACube.dir/ThreadPool.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

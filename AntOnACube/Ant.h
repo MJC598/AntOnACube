@@ -5,11 +5,11 @@
 class Ant {
 public:
 	Graph* graph;
-	std::vector<Vertex*> path;
 	int totalTimeTraveled;
 	Vertex* location;
 	Vertex* goal;
+	RandomNumberGenerator* rng;
 
-	Ant(Vertex* start, Vertex* goal, Graph* graph);
-	void move(RandomNumberGenerator* rng);
+	Ant(Vertex* start, Vertex* goal, Graph* graph, unsigned int seed);
+	void move();
 };

@@ -6,5 +6,7 @@ RandomNumberGenerator::RandomNumberGenerator(unsigned int seed) {
 }
 
 void RandomNumberGenerator::getRandomNumber(int* ret) {
-	*ret = rand() % 3;
+	//mutex.lock();
+	*ret = std::rand() % 3;
+	//mutex.unlock();
 }

@@ -17,7 +17,8 @@ void promptUser(int* numSims, int* seed) {
 void displayResults(Simulation* sim) {
 	std::cout << "Total Sum: " << sim->totalSum << std::endl
 		<< "Number Sims: " << sim->numSims << std::endl
-		<< "Average: " << (double)sim->totalSum / (double)sim->numSims << std::endl;
+		<< "Average: " << sim->getMean() << std::endl
+		<< "Standard Deviation: " << sim->getStandardDeviation() << std::endl << std::endl;
 }
 
 int menuResult() {
