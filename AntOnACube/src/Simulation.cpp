@@ -54,3 +54,7 @@ double Simulation::getStandardDeviation() {
 	return sumUp / (double)numSims;
 }
 
+Simulation::~Simulation() {
+	delete(threadPool);
+	delete(rng);
+}

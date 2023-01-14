@@ -11,5 +11,6 @@ public:
 	RandomNumberGenerator* rng;
 
 	Ant(Vertex* start, Vertex* goal, Graph* graph, unsigned int seed);
+	~Ant();
 	void move();
 };

@@ -1,14 +1,9 @@
-﻿# CMakeList.txt : CMake project for AntOnACube, include source and define
-# project specific logic here.
-#
-cmake_minimum_required (VERSION 3.8)
-project ("AntOnACube")
+cmake_minimum_required(VERSION 3.10)
+project(AntOnACube)
 
-# Add source to this project's executable.
-add_executable (AntOnACube "AntOnACube.cpp" "AntOnACube.h" "Graph.h" "Graph.cpp" "Ant.h" "Ant.cpp" "Simulation.h" "Simulation.cpp" "RandomNumberGenerator.h" "RandomNumberGenerator.cpp" "ThreadPool.h" "ThreadPool.cpp")
+set(CPP_SRC "AntOnACube.cpp" "src/Ant.cpp" "src/Graph.cpp" "src/RandomNumberGenerator.cpp" "src/Simulation.cpp" "src/ThreadPool.cpp")
+set(CPP_HEADERS "AntOnACube.h" "include/Ant.h" "include/Graph.h" "include/RandomNumberGenerator.h" "include/Simulation.h" "include/ThreadPool.h")
 
-if (CMAKE_VERSION VERSION_GREATER 3.12)
-  set_property(TARGET AntOnACube PROPERTY CXX_STANDARD 20)
-endif()
+include_directories("include")
 
-# TODO: Add tests and install targets if needed.
+add_executable(AntOnACube ${CPP_SRC} ${CPP_HEADERS})

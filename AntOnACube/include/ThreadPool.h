@@ -1,6 +1,8 @@
+#pragma once
 #include <functional>
 #include <condition_variable>
 #include <queue>
+#include <thread>
 
 class ThreadPool {
 public:

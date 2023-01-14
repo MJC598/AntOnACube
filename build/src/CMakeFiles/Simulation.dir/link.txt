@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSimulation.a CMakeFiles/Simulation.dir/Ant.cpp.o CMakeFiles/Simulation.dir/Graph.cpp.o CMakeFiles/Simulation.dir/RandomNumberGenerator.cpp.o CMakeFiles/Simulation.dir/Simulation.cpp.o CMakeFiles/Simulation.dir/ThreadPool.cpp.o
+/usr/bin/ranlib libSimulation.a

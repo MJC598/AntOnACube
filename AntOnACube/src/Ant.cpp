@@ -27,3 +27,7 @@ void Ant::move() {
 		move();
 	}
 }
+
+Ant::~Ant() {
+	delete(rng);
+}

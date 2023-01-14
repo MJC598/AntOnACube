@@ -22,5 +22,6 @@ public:
 	void runSim();
 	double getMean();
 	double getStandardDeviation();
+	~Simulation();
 
 };
